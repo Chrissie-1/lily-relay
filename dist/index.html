@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A concept prototype that tests whether operational work should be owned by Lily." />
+  <title>The Lily Work Test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="The Lily Work Test home">
+      <span class="mark">L</span>
+      <span>The Lily Work Test</span>
+    </a>
+    <div class="header-right">
+      <span class="prototype-label">Independent concept prototype</span>
+      <a class="text-link" href="#thesis">Why this exists ↗</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="eyebrow"><span class="pulse"></span> A category test built from the work itself</div>
+      <h1>Can your AI<br><em>finish the job?</em></h1>
+      <p class="hero-copy">Give us one piece of operational work. We’ll tell you whether Lily should own the outcome—or whether you should use something simpler.</p>
+      <a class="primary-link" href="#workbench">Test a workflow <span>↓</span></a>
+      <div class="hero-proof">
+        <span>Default answer</span>
+        <strong>NO</strong>
+        <p>until the work requires judgment, action and accountability.</p>
+      </div>
+    </section>
+
+    <section class="workbench-wrap" id="workbench">
+      <div class="shell section-head">
+        <span class="section-number">01</span>
+        <div>
+          <p class="kicker">SUBMIT THE WORK</p>
+          <h2>Start with the job—not an AI feature.</h2>
+        </div>
+      </div>
+
+      <div class="workbench shell">
+        <div class="input-panel">
+          <div class="panel-topline">
+            <label for="workflowInput">REAL WORK ITEM</label>
+            <span>Redacted example</span>
+          </div>
+          <textarea id="workflowInput" aria-describedby="inputHelp"></textarea>
+          <p id="inputHelp" class="input-help">Use a preset or paste a short description. This prototype does not upload or store data.</p>
+          <div class="preset-row" role="group" aria-label="Example workflows">
+            <button class="preset active" data-example="quote">Distributor RFQ</button>
+            <button class="preset" data-example="routing">Misrouted ticket</button>
+            <button class="preset" data-example="copy">Write a follow-up</button>
+          </div>
+          <button id="runTest" class="run-button"><span>Run the Work Test</span><span class="arrow">→</span></button>
+        </div>
+
+        <aside class="test-standard">
+          <p class="kicker">THE STANDARD</p>
+          <h3>Lily earns the work only if all six conditions hold.</h3>
+          <ol>
+            <li><span>01</span>Repeated operational volume</li>
+            <li><span>02</span>Company-specific judgment</li>
+            <li><span>03</span>More than one system</li>
+            <li><span>04</span>Permissioned action</li>
+            <li><span>05</span>Exceptions and change</li>
+            <li><span>06</span>Measurable outcome</li>
+          </ol>
+          <div class="rule-note">One critical failure can deny the deployment.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="results" class="results hidden" aria-live="polite">
+      <div class="decision-band">
+        <div class="shell decision-inner">
+          <div>
+            <p class="kicker dark">WORK TEST RESULT</p>
+            <h2 id="decisionTitle">Accept the work.</h2>
+          </div>
+          <div class="decision-score">
+            <span id="scoreValue">6/6</span>
+            <small>conditions met</small>
+          </div>
+          <p id="decisionReason" class="decision-reason"></p>
+        </div>
+      </div>
+
+      <div class="shell assessment-section">
+        <div class="section-head inline-head">
+          <span class="section-number">02</span>
+          <div><p class="kicker">THE DECISION</p><h2>Evidence before enthusiasm.</h2></div>
+        </div>
+        <div id="criteriaGrid" class="criteria-grid"></div>
+      </div>
+
+      <div id="executionSection" class="execution-section">
+        <div class="shell section-head inline-head">
+          <span class="section-number">03</span>
+          <div><p class="kicker">EXECUTION BOUNDARY</p><h2>Advice stops. Work continues.</h2></div>
+        </div>
+        <div class="shell execution-grid">
+          <div class="lane ordinary-lane">
+            <div class="lane-title"><span>Typical copilot</span><small>assists</small></div>
+            <div id="copilotSteps" class="steps"></div>
+            <div class="handoff">Hands the work back to a person</div>
+          </div>
+          <div class="lane lily-lane">
+            <div class="lane-title"><span>Lily</span><small>completes</small></div>
+            <div id="lilySteps" class="steps"></div>
+            <div class="outcome-stamp">OUTCOME RECORDED</div>
+          </div>
+        </div>
+        <div class="shell illustrative-note">Illustrative workflow based on publicly described InstaLILY capabilities. It is not a live product execution.</div>
+      </div>
+
+      <div id="contractSection" class="contract-section">
+        <div class="shell contract-layout">
+          <div class="contract-intro">
+            <div class="section-head inline-head">
+              <span class="section-number">04</span>
+              <div><p class="kicker">THE OUTPUT</p><h2>A contract for accountable work.</h2></div>
+            </div>
+            <p>Sales sells the outcome. Forward-deployed engineering scopes the system. The customer sees exactly where human authority remains.</p>
+            <button id="copyContract" class="secondary-button">Copy contract <span>↗</span></button>
+            <span id="copyStatus" class="copy-status" role="status"></span>
+          </div>
+          <article class="contract-card" id="contractCard">
+            <div class="contract-header">
+              <div><span class="mono-label">LILY WORK CONTRACT</span><h3 id="contractTitle">Respond to qualified distributor RFQs</h3></div>
+              <span class="contract-status">PROPOSED</span>
+            </div>
+            <dl id="contractFields"></dl>
+            <div class="contract-footer">
+              <span>Proof window</span>
+              <strong id="proofWindow">30 days</strong>
+              <span>Review cadence</span>
+              <strong>Weekly</strong>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="alternatives" id="thesis">
+      <div class="shell section-head inline-head">
+        <span class="section-number">05</span>
+        <div><p class="kicker">CATEGORY POSITION</p><h2>Define Lily by the responsibility it accepts.</h2></div>
+      </div>
+      <div class="shell comparison" role="table" aria-label="Alternatives comparison">
+        <div class="comparison-row comparison-head" role="row">
+          <span role="columnheader">Alternative</span><span role="columnheader">Primary output</span><span role="columnheader">Who finishes the job?</span><span role="columnheader">What happens when work changes?</span>
+        </div>
+        <div class="comparison-row" role="row"><strong>Copilot</strong><span>Answer or draft</span><span>Employee</span><span>Prompt or tool is revised</span></div>
+        <div class="comparison-row" role="row"><strong>RPA</strong><span>Fixed automation</span><span>Bot, inside known rules</span><span>Workflow is rebuilt</span></div>
+        <div class="comparison-row" role="row"><strong>Systems integrator</strong><span>Implemented project</span><span>Customer team</span><span>New engagement begins</span></div>
+        <div class="comparison-row lily-row" role="row"><strong>Lily</strong><span>Controlled operational outcome</span><span>Lily, with explicit human gates</span><span>Deployed system keeps adapting</span></div>
+      </div>
+      <div class="shell thesis-card">
+        <p>THE POSITION</p>
+        <blockquote>“Other AI helps an employee do the work. Lily accepts responsibility for completing controlled, measurable work.”</blockquote>
+      </div>
+    </section>
+
+    <section class="proof shell">
+      <p class="kicker">PUBLIC PROOF REFERENCE</p>
+      <div class="proof-grid">
+        <div><strong>6,000+</strong><span>emails handled</span></div>
+        <div><strong>~1,500</strong><span>quotes handled</span></div>
+        <div><strong>30 days</strong><span>post-launch window</span></div>
+      </div>
+      <p class="proof-source">Industrial automation distribution case study, late 2025. These figures are reference evidence—not a forecast for submitted work.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <div><strong>The Lily Work Test</strong><p>Concept prepared for a Head of Product Marketing conversation.</p></div>
+      <p>Independent prototype. Not commissioned, endorsed or published by InstaLILY.</p>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
