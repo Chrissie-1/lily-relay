@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Lily Relay — an internal promise-to-proof control plane for Sales, FDE and Product Marketing." />
-  <title>Lily Relay — Promise to Proof</title>
+  <meta name="description" content="Lily Relay is a workflow-aware coordination layer that aligns Sales, FDE and Product from customer promise to proven outcome." />
+  <title>Lily Relay — Cross-functional operations, without the handoff debt</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,25 +15,32 @@
     <div class="brand"><div class="brand-mark">LR</div><div><strong>Lily Relay</strong><span>Promise → proof</span></div></div>
     <nav aria-label="Primary">
       <a class="nav-item active" href="#control"><span>⌁</span>Control room</a>
+      <a class="nav-item" href="#workflow"><span>◇</span>Workflow fit</a>
+      <a class="nav-item" href="#portfolio"><span>▦</span>Portfolio</a>
       <a class="nav-item" href="#commitments"><span>↳</span>Commitment inbox <b id="navCommitCount">1</b></a>
       <a class="nav-item" href="#fde"><span>⌘</span>FDE validation</a>
-      <a class="nav-item" href="#proof"><span>◎</span>Proof plan</a>
+      <a class="nav-item" href="#proof"><span>◎</span>Outcome plan</a>
       <a class="nav-item" href="#reality"><span>≠</span>Reality diff</a>
-      <a class="nav-item" href="#claims"><span>✓</span>Claim release</a>
+      <a class="nav-item" href="#claims"><span>✓</span>Product approval</a>
       <a class="nav-item" href="#distribution"><span>↗</span>Distribution</a>
+      <a class="nav-item" href="#connectors"><span>◇</span>Connector map</a>
     </nav>
-    <div class="sidebar-bottom"><div class="prototype-note"><span></span>Illustrative internal prototype</div><button id="resetDemo" class="reset-button">Reset demonstration</button></div>
+    <div class="sidebar-bottom"><div class="prototype-note"><span></span>Workflow-aware prototype</div><button id="resetDemo" class="reset-button">Reset demonstration</button></div>
   </aside>
 
   <div class="app-shell">
     <header class="topbar">
-      <div class="breadcrumbs"><span>OPPORTUNITIES</span><i>/</i><strong>ATLAS INDUSTRIAL SUPPLY</strong></div>
-      <div class="top-actions"><span class="sync-state"><i></i> Demo data synced</span><button class="avatar" aria-label="User profile">PM</button></div>
+      <div class="breadcrumbs"><span>OPERATING WORKFLOWS</span><i>/</i><strong>ATLAS QUOTE EXECUTION</strong></div>
+      <div class="top-actions">
+        <button id="fullDemoButton" class="demo-button">Run synthetic demo <span>▶</span></button>
+        <div class="role-switcher" aria-label="View as role"><button data-role="sales">Sales</button><button data-role="fde">FDE</button><button class="active" data-role="product">Product</button></div>
+        <span class="sync-state"><i></i> Workflow-aware demo</span><button class="avatar" aria-label="User profile">PO</button>
+      </div>
     </header>
     <main>
       <section id="control" class="hero-section">
-        <div><div class="overline">OUTCOME CONTRACT · OC-0247</div><h1>One contract.<br><em>Three teams.</em> Zero lost context.</h1><p>Lily Relay controls the path from what Sales promises, through what FDE ships, to what Product Marketing is allowed to claim.</p></div>
-        <div class="hero-action-card"><span class="mini-label">NEXT REQUIRED ACTION</span><strong id="nextActionTitle">Extract sales commitments</strong><p id="nextActionDetail">Turn the discovery call into accountable, reviewable promises.</p><button id="nextActionButton">Open commitment inbox <span>→</span></button></div>
+        <div><div class="overline">WORKFLOW-AWARE COORDINATION · OC-0247</div><h1>One workflow.<br><em>Three teams.</em> No handoff debt.</h1><p>Lily Relay learns how your company already works, then turns every customer promise into a coordinated path across Sales, FDE and Product—from commitment to execution to reusable proof.</p><div class="value-strip"><span>ADAPTS TO YOUR WORKFLOW</span><span>KEEPS DECISIONS IN CONTEXT</span><span>WORKS THROUGH YOUR EXISTING TOOLS</span></div></div>
+        <div class="hero-action-card"><span class="mini-label">NEXT REQUIRED ACTION</span><strong id="nextActionTitle">Map the operating workflow</strong><p id="nextActionDetail">Tell Relay where truth lives so coordination fits the way this team already works.</p><button id="nextActionButton" data-target="#workflow">Map this workflow <span>→</span></button></div>
       </section>
 
       <section class="stage-rail" aria-label="Outcome contract lifecycle">
@@ -48,7 +55,43 @@
         <article><span>ACCOUNT</span><strong>Atlas Industrial Supply</strong><small>Industrial distribution · 46 branches</small></article>
         <article><span>OUTCOME SOUGHT</span><strong>Faster quote execution</strong><small>Current median: 3–4 hours</small></article>
         <article><span>CONTRACT HEALTH</span><strong id="healthValue" class="warning-text">Awaiting extraction</strong><small id="healthDetail">5 potential commitments detected</small></article>
-        <article><span>OWNERS</span><div class="owner-stack"><i>SL</i><i>FD</i><i>PM</i></div><small>Sales · FDE · Product Marketing</small></article>
+        <article><span>OWNERS</span><div class="owner-stack"><i>SL</i><i>FD</i><i>PD</i></div><small>Sales · FDE · Product</small></article>
+      </section>
+
+      <section id="workflow" class="workflow-fit-section">
+        <div class="section-heading"><div><span class="section-number">00</span><p class="overline">WORKFLOW FIT</p><h2>Meet the team where work already happens.</h2><p>Relay first maps systems, decision rights and handoffs. It then coordinates the workflow without forcing teams into a new project-management process.</p></div><span id="fitBadge" class="release-badge">NOT MAPPED</span></div>
+        <div class="fit-layout">
+          <article class="fit-config">
+            <div class="card-toolbar"><span>OPERATING MODEL SCAN</span><span>4 SIGNALS</span></div>
+            <div class="fit-fields">
+              <label>COMMERCIAL SYSTEM<select id="crmSelect"><option>Salesforce</option><option>HubSpot</option><option>Microsoft Dynamics</option></select></label>
+              <label>CONVERSATION SOURCE<select id="conversationSelect"><option>Gong</option><option>Zoom</option><option>Microsoft Teams</option></select></label>
+              <label>DELIVERY SYSTEM<select id="deliverySelect"><option>Jira</option><option>Linear</option><option>Asana</option></select></label>
+              <label>TEAM COORDINATION<select id="collaborationSelect"><option>Slack</option><option>Microsoft Teams</option><option>Email</option></select></label>
+            </div>
+            <button id="workflowMapButton" class="primary-action">Map this workflow <span>⌁</span></button>
+          </article>
+          <article class="fit-map">
+            <div class="card-toolbar"><span>LIVE COORDINATION PATH</span><span id="fitStatus">AWAITING MAP</span></div>
+            <div class="relay-route">
+              <div class="route-node" data-route="sales"><span>01</span><strong>Sales captures intent</strong><small>Promise + source</small></div>
+              <i>→</i><div class="relay-core"><span>LR</span><strong>Relay</strong><small>Context + gates</small></div><i>→</i>
+              <div class="route-stack"><div class="route-node" data-route="fde"><span>02</span><strong>FDE validates reality</strong><small>Scope + dependencies</small></div><div class="route-node" data-route="product"><span>03</span><strong>Product defines success</strong><small>Outcome + evidence</small></div></div>
+            </div>
+            <div class="fit-result"><span>FIT PRINCIPLE</span><p><strong>Configure the coordination, not the company.</strong> Relay reads existing signals, routes only decisions that need a human, and writes approved truth back to the tools each team already trusts.</p></div>
+          </article>
+        </div>
+        <div class="value-grid"><article><span>01 · UNDERSTAND</span><h3>Models the real workflow</h3><p>Captures systems, owners, approval boundaries, dependencies and proof requirements before automation begins.</p></article><article><span>02 · COORDINATE</span><h3>Moves decisions, not dashboards</h3><p>Each team sees the exact decision it owns, with the source context and downstream impact attached.</p></article><article><span>03 · LEARN</span><h3>Improves every handoff</h3><p>Scope drift, blocked claims and missing evidence become reusable operating knowledge for the next opportunity.</p></article></div>
+      </section>
+
+      <section id="portfolio" class="portfolio-section">
+        <div class="portfolio-heading"><div><p class="overline">PORTFOLIO CONTROL</p><h2>Three opportunities. One commercial truth.</h2></div><div class="portfolio-metrics"><span><b>3</b> active</span><span><b>2</b> blocked</span><span><b>1</b> market-ready</span></div></div>
+        <div class="portfolio-table">
+          <div class="portfolio-row portfolio-head"><span>ACCOUNT / USE CASE</span><span>OWNER</span><span>LIFECYCLE</span><span>HEALTH</span><span>NEXT ACTION</span></div>
+          <div class="portfolio-row selected"><span><strong>Atlas Industrial Supply</strong><small>Quote execution · Distribution</small></span><span>SL · FD · PD</span><span><i id="atlasLifecycle">Promised</i></span><span id="atlasHealth" class="health amber">Needs validation</span><button id="atlasAction" data-target="#commitments">Open contract →</button></div>
+          <div class="portfolio-row"><span><strong>Meridian Logistics</strong><small>Case routing · 3PL</small></span><span>AK · JR · PM</span><span><i>Shipped</i></span><span class="health red">Scope drift</span><button class="inspect-only" data-account="meridian">Inspect risk →</button></div>
+          <div class="portfolio-row"><span><strong>Northstar Field Service</strong><small>Parts identification · Field service</small></span><span>MT · LN · PM</span><span><i>Marketable</i></span><span class="health green">Proof released</span><button class="inspect-only" data-account="northstar">View proof →</button></div>
+        </div>
       </section>
 
       <section id="commitments" class="workspace-section">
@@ -73,11 +116,11 @@
       </section>
 
       <section id="proof" class="workspace-section locked-section">
-        <div class="section-heading"><div><span class="section-number">03</span><p class="overline">COMMERCIAL EVIDENCE</p><h2>Proof plan</h2><p>Define the market question and instrument evidence before deployment starts.</p></div><div class="owner-badge pmm">PMM OWNS THIS STEP</div></div>
+        <div class="section-heading"><div><span class="section-number">03</span><p class="overline">OUTCOME DEFINITION</p><h2>Product outcome plan</h2><p>Define success, measurement and acceptable product language before delivery starts.</p></div><div class="owner-badge pmm">PRODUCT OWNS THIS STEP</div></div>
         <div class="lock-cover" id="proofLock"><span>🔒</span><strong>Validated scope required</strong></div>
         <div id="proofContent" class="proof-layout">
           <article class="form-card"><label>POSITIONING HYPOTHESIS<textarea id="hypothesis">Lily completes complex distributor quotes across existing systems while preserving pricing authority.</textarea></label><label>ALTERNATIVE DISPLACED<input value="Manual inbox triage + ERP research + fragmented quote workflow" /></label><label>BUYER<input value="VP of Inside Sales · Industrial Distribution" /></label><label>LANGUAGE TO DENY<input value="Fully autonomous quoting · Guaranteed revenue increase" /></label></article>
-          <article class="metric-card"><div class="card-toolbar"><span>REQUIRED MEASUREMENT</span><span>5 METRICS</span></div><ul><li><i></i><div><strong>Median quote response time</strong><small>Baseline owner: Sales Operations</small></div><span>REQUIRED</span></li><li><i></i><div><strong>Quotes completed</strong><small>Source: ERP transaction log</small></div><span>REQUIRED</span></li><li><i></i><div><strong>Human-review rate</strong><small>Source: InstaControl trace</small></div><span>REQUIRED</span></li><li><i></i><div><strong>Quote accuracy</strong><small>Source: Evaluation dataset</small></div><span>REQUIRED</span></li><li><i></i><div><strong>Conversion rate</strong><small>Baseline owner: Revenue Operations</small></div><span>OPTIONAL</span></li></ul><button id="createPlanButton" class="primary-action">Create proof plan <span>→</span></button></article>
+          <article class="metric-card"><div class="card-toolbar"><span>REQUIRED MEASUREMENT</span><span>5 METRICS</span></div><ul><li><i></i><div><strong>Median quote response time</strong><small>Baseline owner: Sales Operations</small></div><span>REQUIRED</span></li><li><i></i><div><strong>Quotes completed</strong><small>Source: ERP transaction log</small></div><span>REQUIRED</span></li><li><i></i><div><strong>Human-review rate</strong><small>Source: Product telemetry</small></div><span>REQUIRED</span></li><li><i></i><div><strong>Quote accuracy</strong><small>Source: Evaluation dataset</small></div><span>REQUIRED</span></li><li><i></i><div><strong>Conversion rate</strong><small>Baseline owner: Revenue Operations</small></div><span>OPTIONAL</span></li></ul><button id="createPlanButton" class="primary-action">Create outcome plan <span>→</span></button></article>
         </div>
       </section>
 
@@ -88,7 +131,7 @@
       </section>
 
       <section id="claims" class="workspace-section locked-section">
-        <div class="section-heading"><div><span class="section-number">05</span><p class="overline">DEFAULT-DENY GOVERNANCE</p><h2>Claim release gate</h2><p>No market language leaves the system without traceable evidence and an explicit decision.</p></div><div class="owner-badge pmm">PMM OWNS THIS STEP</div></div>
+        <div class="section-heading"><div><span class="section-number">05</span><p class="overline">DEFAULT-DENY GOVERNANCE</p><h2>Product truth gate</h2><p>No outcome language leaves the system without traceable evidence and an explicit Product decision.</p></div><div class="owner-badge pmm">PRODUCT OWNS THIS STEP</div></div>
         <div class="lock-cover" id="claimsLock"><span>🔒</span><strong>Production evidence required</strong></div>
         <div id="claimsContent"><div id="claimCards" class="claim-grid"></div><div class="execution-footer"><div><span class="mini-label">RELEASE REQUIREMENT</span><p>Every claim must be approved, narrowed, denied or returned for evidence.</p></div><button id="releaseClaimsButton" class="primary-action" disabled>Release approved proof <span>→</span></button></div></div>
       </section>
@@ -96,12 +139,31 @@
       <section id="distribution" class="workspace-section distribution-section locked-section">
         <div class="section-heading"><div><span class="section-number">06</span><p class="overline">EXECUTED OUTPUT</p><h2>Distribution center</h2><p>Approved truth is converted into seller-ready assets and returned to the systems where work happens.</p></div><span id="releaseBadge" class="release-badge">NOT RELEASED</span></div>
         <div class="lock-cover" id="distributionLock"><span>🔒</span><strong>Release approved proof to unlock</strong></div>
-        <div id="distributionContent" class="distribution-grid"><article class="proof-card"><div class="asset-type">SALESFORCE PROOF CARD</div><span class="vertical-tag">INDUSTRIAL DISTRIBUTION</span><h3>High-volume quote execution</h3><blockquote>“During its first 30 days, Lily handled more than 6,000 inbound emails and approximately 1,500 quotes.”</blockquote><dl><dt>Buyer</dt><dd>VP of Inside Sales</dd><dt>Use when</dt><dd>Response time and quote capacity are the problem</dd><dt>Do not claim</dt><dd>Guaranteed conversion or fully autonomous quoting</dd></dl></article><div class="asset-stack"><article><span>GONG TALK TRACK</span><strong>Created</strong><p>Problem → controlled execution → bounded public proof.</p><button class="copy-asset">Copy</button></article><article><span>BATTLECARD EVIDENCE</span><strong>Created</strong><p>Contrasts completed work with drafting and fixed automation.</p><button class="copy-asset">Copy</button></article><article><span>CASE STUDY DRAFT</span><strong>Queued</strong><p>Customer and legal clearance required before publication.</p><button class="copy-asset">Open task</button></article></div></div>
+        <div id="distributionContent" class="distribution-grid"><article class="proof-card"><div class="asset-type">SALESFORCE PROOF CARD</div><span class="vertical-tag">INDUSTRIAL DISTRIBUTION</span><h3>High-volume quote execution</h3><blockquote>“During its first 30 days, Lily handled more than 6,000 inbound emails and approximately 1,500 quotes.”</blockquote><dl><dt>Buyer</dt><dd>VP of Inside Sales</dd><dt>Use when</dt><dd>Response time and quote capacity are the problem</dd><dt>Do not claim</dt><dd>Guaranteed conversion or fully autonomous quoting</dd></dl></article><div class="asset-stack"><article><span>GONG TALK TRACK</span><strong>Created</strong><p>Problem → controlled execution → bounded public proof.</p><button class="copy-asset" data-asset="talktrack">Open</button></article><article><span>BATTLECARD EVIDENCE</span><strong>Created</strong><p>Contrasts completed work with drafting and fixed automation.</p><button class="copy-asset" data-asset="battlecard">Open</button></article><article><span>CASE STUDY CLEARANCE</span><strong>Task ready</strong><p>Customer and legal clearance required before publication.</p><button class="copy-asset" data-asset="clearance">Open task</button></article></div></div>
+        <div class="export-actions"><div><span class="mini-label">PORTABLE OUTPUT</span><p>Export the complete synthetic Outcome Contract or open a VP-ready executive brief.</p></div><button id="copyBriefButton" class="outline-export" disabled>Open executive brief</button><button id="exportContractButton" class="primary-action" disabled>Download contract JSON <span>↓</span></button></div>
+      </section>
+
+      <section id="connectors" class="connector-section">
+        <div class="section-heading"><div><span class="section-number">07</span><p class="overline">CONNECTOR-READY ARCHITECTURE</p><h2>Fits the stack. Learns the operating pattern.</h2><p>Relay adapts to the systems and approval paths already in place. Every integration is simulated here; the contracts define read inputs, controlled outputs and evidence required to reconcile each system.</p></div><span class="release-badge live">NO LIVE CREDENTIALS</span></div>
+        <div class="connector-grid">
+          <article><span class="connector-icon">SF</span><div><strong>Salesforce / HubSpot</strong><small>Read opportunity, account, stage and approved proof. Write only validated scope and released claims.</small></div><em>CONTRACT READY</em></article>
+          <article><span class="connector-icon">GO</span><div><strong>Gong</strong><small>Read call transcript and source timestamps. Never treat extraction as an approved commitment.</small></div><em>CONTRACT READY</em></article>
+          <article><span class="connector-icon">JL</span><div><strong>Jira / Linear</strong><small>Create scoped dependency and evidence tasks after a named human decision.</small></div><em>CONTRACT READY</em></article>
+          <article><span class="connector-icon">PT</span><div><strong>Product telemetry / Evaluations</strong><small>Read shipped capability, approval events, quality signals and operational evidence.</small></div><em>ADAPTER READY</em></article>
+          <article><span class="connector-icon">SL</span><div><strong>Slack</strong><small>Deliver decision requests and risk notifications with a deep link to the Outcome Contract.</small></div><em>CONTRACT READY</em></article>
+          <article><span class="connector-icon">AWS</span><div><strong>AWS control plane</strong><small>Bedrock extraction, Step Functions orchestration, Cognito identity, KMS encryption and CloudWatch audit.</small></div><em>REFERENCE DESIGN</em></article>
+        </div>
       </section>
 
       <section class="activity-section"><div class="section-heading compact-heading"><div><p class="overline">AUDIT TRAIL</p><h2>Execution log</h2></div></div><div id="activityLog" class="activity-log"></div></section>
     </main>
   </div>
+  <dialog id="detailModal" class="detail-modal" aria-labelledby="modalTitle">
+    <div class="modal-top"><div><span id="modalEyebrow" class="mini-label">SIMULATED RECORD</span><h2 id="modalTitle">Record detail</h2></div><button id="modalCloseButton" aria-label="Close detail">×</button></div>
+    <p id="modalSummary" class="modal-summary"></p>
+    <textarea id="modalContent" readonly aria-label="Generated content"></textarea>
+    <div class="modal-actions"><span id="modalStatus">Synthetic data · safe to present</span><button id="modalCopyButton" class="primary-action">Copy text <span>⌁</span></button></div>
+  </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="app.js"></script>
 </body>

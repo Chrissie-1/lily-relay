@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;width:1080px;height:1080px;overflow:hidden}
+    body{font-family:Inter,"Segoe UI",Arial,sans-serif;background:#f2f1eb;color:#101414}
+    main{width:100%;height:100%;padding:72px;display:flex;flex-direction:column}
+    .eyebrow{font:700 15px/1 monospace;letter-spacing:.16em;text-transform:uppercase;color:#69716e}
+    h1{font-size:66px;line-height:1;margin:24px 0 18px;letter-spacing:-.055em}
+    .intro{font-size:22px;line-height:1.45;color:#69716e;margin:0 0 48px;max-width:760px}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#d8d8d0;border:1px solid #d8d8d0}
+    .swatch{height:240px;background:#fbfaf6;padding:18px;display:flex;flex-direction:column;justify-content:space-between}
+    .color{height:142px;border:1px solid rgba(16,20,20,.13)}
+    .name{font-size:18px;font-weight:700;margin-top:13px}.hex{font:500 14px/1.2 monospace;color:#69716e;margin-top:5px}
+    footer{margin-top:auto;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #d8d8d0;padding-top:20px;font:600 14px/1 monospace;letter-spacing:.08em;text-transform:uppercase}
+    .brand{display:flex;align-items:center;gap:10px}.mark{width:14px;height:14px;background:#b7ff43;border-radius:3px}
+  </style>
+</head>
+<body><main>
+  <div class="eyebrow">Lily Relay · Visual System</div>
+  <h1>Core color palette</h1>
+  <p class="intro">Warm editorial neutrals with an acid-green signal color and restrained functional accents.</p>
+  <section class="grid">
+    <div class="swatch"><div class="color" style="background:#101414"></div><div><div class="name">Ink</div><div class="hex">#101414</div></div></div>
+    <div class="swatch"><div class="color" style="background:#F2F1EB"></div><div><div class="name">Paper</div><div class="hex">#F2F1EB</div></div></div>
+    <div class="swatch"><div class="color" style="background:#FBFAF6"></div><div><div class="name">Panel</div><div class="hex">#FBFAF6</div></div></div>
+    <div class="swatch"><div class="color" style="background:#B7FF43"></div><div><div class="name">Acid</div><div class="hex">#B7FF43</div></div></div>
+    <div class="swatch"><div class="color" style="background:#69716E"></div><div><div class="name">Muted</div><div class="hex">#69716E</div></div></div>
+    <div class="swatch"><div class="color" style="background:#D8D8D0"></div><div><div class="name">Rule</div><div class="hex">#D8D8D0</div></div></div>
+    <div class="swatch"><div class="color" style="background:#5678FF"></div><div><div class="name">Blue</div><div class="hex">#5678FF</div></div></div>
+    <div class="swatch"><div class="color" style="background:linear-gradient(90deg,#E45F4E 0 50%,#4F8B55 50%)"></div><div><div class="name">States</div><div class="hex">#E45F4E · #4F8B55</div></div></div>
+  </section>
+  <footer><div class="brand"><span class="mark"></span>Lily Relay</div><div>Promise → Proof</div></footer>
+</main></body></html>
